@@ -1,0 +1,19 @@
+# Llaves y entornos
+.env
+*.env
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Datos: se regeneran con los scripts (no se suben)
+*.db
+datos/crudos/*
+!datos/crudos/.gitkeep
+datos/documentos/*
+!datos/documentos/.gitkeep
+chroma_db/
+salida/
+
+# Las trazas de adk web SÍ se suben (requisito): trazas/

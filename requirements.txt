@@ -1,0 +1,13 @@
+# Versión de ADK fija (requisito del proyecto). Si la cambian, anótenlo en CHANGELOG.md.
+google-adk==2.15.0
+mcp==2.3.0
+python-dotenv==1.2.4
+
+# RAG (Centros Amigables + catálogo de programas de México Vivo)
+chromadb
+sentence-transformers   # instala torch (CPU)
+pymupdf4llm
+
+# Datos públicos (CONAPO, SEP) en Excel/CSV
+pandas
+openpyxl
