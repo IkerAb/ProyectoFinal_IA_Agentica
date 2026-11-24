@@ -5,6 +5,19 @@ los evals** debe quedar aquí explícito (qué se cambió, en qué agente, por q
 
 ## [Sin publicar]
 
+### Experto de la Fundación v1 (Iker)
+- Datos verificados de México Vivo en `datos/fundacion/` (6 programas, cifras 2023, fuentes
+  externas), indexados en la colección RAG `programas` (`scripts/ingest.py` ahora lee `.jsonl`).
+- Base operativa rehecha: catálogo con los `program_id` reales y escenario `SIMULADO` sólo para
+  Generación Viva, PARESS y Hablemos de sexo y amor; los demás responden INFORMACIÓN NO DISPONIBLE.
+  Se eliminaron los programas inventados P01–P05.
+- 7 herramientas: `search_programs`, `get_program_details`, `get_available_resources`,
+  `calculate_intervention_cost`, `check_feasibility` (con `max_escuelas_viables`),
+  `get_intervention_history`, `audit_proposal` (veredicto APROBABLE / NO_VIABLE / DUPLICADO /
+  REQUIERE_INFORMACION).
+- Instrucciones con proceso de 5 etapas, reglas de datos y tres decisiones (APROBADO, RECHAZADO,
+  REQUIERE INFORMACIÓN); `crear_experto()` y paquete `solo_experto/` para probarlo aislado.
+
 ### Agregado
 - Estructura inicial del repositorio: paquete `mexico_vivo/` con tres agentes (Evaluador,
   Experto de la Fundación, Contactador) orquestados como `SequentialAgent[LoopAgent(evaluador,

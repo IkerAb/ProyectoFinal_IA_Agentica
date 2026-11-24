@@ -23,6 +23,7 @@ def _ruta(var: str, default: str) -> Path:
 FUNDACION_DB = _ruta("FUNDACION_DB", "datos/fundacion.db")
 PUBLICOS_DB = _ruta("PUBLICOS_DB", "datos/publicos.db")
 CHROMA_DIR = _ruta("CHROMA_DIR", "chroma_db")
+FUNDACION_DOCS = PROJECT_DIR / "datos" / "fundacion"   # catálogo VERIFICADO de programas (RAG)
 SALIDA_DIR = PROJECT_DIR / "salida"          # correos "enviados" (simulados)
 
 # "Hoy" del sistema: fíjenlo para que los evals sean reproducibles.

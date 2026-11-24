@@ -1,10 +1,9 @@
-"""RAG compartido. Colecciones (ver scripts/ingest.py):
+"""RAG compartido sobre ChromaDB. Colecciones (ver scripts/ingest.py):
 
-- "centros_amigables" → Directorio de Centros Amigables (PDF 172 p.)  → lo usa el EVALUADOR
-- "programas"         → documentos de programas de México Vivo / reporte anual → lo usa el EXPERTO
+- "centros_amigables" → Directorio de Centros Amigables (PDF 172 p.)        → EVALUADOR
+- "programas"         → catálogo verificado datos/fundacion/programas.jsonl  → EXPERTO
+                        (la herramienta del Experto es search_programs, en tools/fundacion.py)
 
-Pueden reemplazar este archivo con su rag_core.py del Lab 6; sólo mantengan las firmas de
-buscar_centros_amigables y buscar_programas para no romper los agentes.
 Los imports pesados (chromadb, sentence-transformers) son perezosos para que `adk web`
 cargue aunque todavía no hayan indexado nada.
 """
@@ -15,6 +14,10 @@ from functools import lru_cache
 from ..config import CHROMA_DIR
 
 MODELO_EMB_LOCAL = "intfloat/multilingual-e5-small"
+
+
+class RagNoDisponible(Exception):
+    """Faltan dependencias o la colección no está indexada."""
 
 
 @lru_cache(maxsize=1)
@@ -36,20 +39,18 @@ def embed(textos: list[str], es_consulta: bool) -> list[list[float]]:
     return _embedder().encode([pref + t for t in textos], normalize_embeddings=True).tolist()
 
 
-def _buscar(coleccion: str, consulta: str, k: int, filtro: dict | None = None) -> dict:
+def buscar(coleccion: str, consulta: str, k: int = 5, filtro: dict | None = None) -> list[dict]:
+    """Regresa [{texto, distancia, **metadatos}]. Lanza RagNoDisponible si no se puede buscar."""
     try:
         col = _cliente().get_collection(coleccion)
-    except ImportError:
-        return {"status": "error", "mensaje": "Falta chromadb/sentence-transformers: uv pip install -r requirements.txt"}
-    except Exception:
-        return {"status": "error", "mensaje": f"La colección {coleccion!r} no existe. Corran scripts/ingest.py."}
+    except ImportError as e:
+        raise RagNoDisponible("faltan chromadb/sentence-transformers (uv pip install -r requirements.txt)") from e
+    except Exception as e:
+        raise RagNoDisponible(f"la colección {coleccion!r} no existe; corran scripts/ingest.py") from e
     k = max(1, min(int(k), 8))
     r = col.query(query_embeddings=embed([consulta], True), n_results=k, where=filtro or None)
-    resultados = [
-        {"texto": doc, "archivo": meta.get("archivo"), "pagina": meta.get("pagina")}
-        for doc, meta in zip(r["documents"][0], r["metadatas"][0])
-    ]
-    return {"status": "ok", "resultados": resultados}
+    return [{"texto": doc, "distancia": round(dist, 3), **meta}
+            for doc, meta, dist in zip(r["documents"][0], r["metadatas"][0], r["distances"][0])]
 
 
 def buscar_centros_amigables(consulta: str, estado: str = "", k: int = 5) -> dict:
@@ -65,18 +66,8 @@ def buscar_centros_amigables(consulta: str, estado: str = "", k: int = 5) -> dic
     Returns:
         dict con 'resultados': texto, archivo y página. Cita como [archivo, p. N].
     """
-    filtro = {"estado": estado} if estado else None
-    return _buscar("centros_amigables", consulta, k, filtro)
-
-
-def buscar_programas(consulta: str, k: int = 5) -> dict:
-    """Busca en los documentos de programas de México Vivo (objetivos, requisitos, población).
-
-    Args:
-        consulta: Qué buscar, p. ej. "requisitos del programa de educadores pares".
-        k: Número de fragmentos (máximo 8).
-
-    Returns:
-        dict con 'resultados': texto, archivo y página. Cita como [archivo, p. N].
-    """
-    return _buscar("programas", consulta, k)
+    try:
+        res = buscar("centros_amigables", consulta, k, {"estado": estado} if estado else None)
+    except RagNoDisponible as e:
+        return {"status": "error", "mensaje": str(e)}
+    return {"status": "ok", "resultados": res}

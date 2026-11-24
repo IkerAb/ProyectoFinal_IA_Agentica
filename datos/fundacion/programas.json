@@ -1,0 +1,233 @@
+[
+  {
+    "program_id": "generacion_viva",
+    "name": "Generación Viva",
+    "entity": "México Vivo Fundación",
+    "description": "Trabaja por el derecho de la juventud a tener acceso a información sobre sexualidad y salud sexual mediante intervenciones en el espacio escolar con participación de docentes, madres y padres de familia.",
+    "objectives": [],
+    "target_population": [
+      "juventud"
+    ],
+    "delivery_channels": [
+      "intervenciones en el espacio escolar"
+    ],
+    "documented_participation": [
+      "docentes",
+      "madres y padres de familia"
+    ],
+    "requirements": null,
+    "resource_needs": null,
+    "coverage_capacity": null,
+    "costs": null,
+    "geographic_coverage": null,
+    "evidence_status": "descripción institucional publicada; los campos no documentados se dejan vacíos",
+    "sources": [
+      {
+        "title": "México Vivo Fundación - página oficial",
+        "url": "https://mexicovivo.org/",
+        "accessed": "2026-11-23",
+        "support": "Descripción de Generación Viva, líneas 57-60 del contenido consultado."
+      },
+      {
+        "title": "Términos y Condiciones de México Vivo",
+        "url": "https://mexicovivo.org/terminos-y-condiciones/",
+        "accessed": "2026-11-23",
+        "support": "Sección 5.1: especialistas en educación sexual, psicología y pedagogía; talleres a estudiantes, conferencias a madres/padres y capacitación docente."
+      }
+    ]
+  },
+  {
+    "program_id": "paress",
+    "name": "PARESS",
+    "entity": "México Vivo Fundación",
+    "description": "Iniciativa que busca formar jóvenes en temas de salud sexual, desarrollando sus habilidades y capacidades para convertirse en agentes de cambio en sus comunidades educativas. Promueve la Educación Integral en Sexualidad mediante un enfoque multidimensional con participación de sociedad civil, instituciones educativas, gubernamentales e industria del sector salud.",
+    "objectives": [
+      "Apoyar la disminución del embarazo no deseado en adolescentes y jóvenes.",
+      "Promover la Educación Integral en Sexualidad para la salud sexual."
+    ],
+    "target_population": [
+      "jóvenes",
+      "adolescentes"
+    ],
+    "delivery_channels": [
+      "formación de jóvenes",
+      "cursos digitales",
+      "videoteca"
+    ],
+    "documented_participation": [
+      "sociedad civil",
+      "instituciones educativas",
+      "instituciones gubernamentales",
+      "industria del sector salud"
+    ],
+    "requirements": null,
+    "resource_needs": null,
+    "coverage_capacity": null,
+    "costs": null,
+    "geographic_coverage": null,
+    "related_sustainable_development_goals": [
+      {
+        "number": 3,
+        "name": "Salud y bienestar"
+      },
+      {
+        "number": 4,
+        "name": "Educación de calidad"
+      },
+      {
+        "number": 5,
+        "name": "Igualdad de género"
+      },
+      {
+        "number": 10,
+        "name": "Reducción de las desigualdades"
+      },
+      {
+        "number": 17,
+        "name": "Alianzas para lograr los objetivos"
+      }
+    ],
+    "evidence_status": "descripción institucional publicada; los campos no documentados se dejan vacíos",
+    "sources": [
+      {
+        "title": "México Vivo - PARESS",
+        "url": "https://mexicovivo.org/educacion-sexual/paress/",
+        "accessed": "2026-11-23",
+        "support": "Descripción, objetivo y enfoque multidimensional."
+      },
+      {
+        "title": "Términos y Condiciones de México Vivo",
+        "url": "https://mexicovivo.org/terminos-y-condiciones/",
+        "accessed": "2026-11-23",
+        "support": "Sección 5.2: directorios, notas, consejería en línea, atención telefónica y contacto con especialistas."
+      }
+    ]
+  },
+  {
+    "program_id": "assi_vivo",
+    "name": "ASSI Vivo",
+    "entity": "México Vivo Fundación",
+    "description": "En el Centro Comunitario acompaña con atención médica y psicológica integral para promover salud, bienestar, placer y plenitud en la sexualidad. Los términos institucionales describen servicios presenciales y en línea para orientar, acompañar, diagnosticar y ofrecer consejería e insumos relacionados con la salud sexual.",
+    "objectives": [],
+    "target_population": null,
+    "delivery_channels": [
+      "presencial",
+      "en línea"
+    ],
+    "documented_participation": [],
+    "requirements": null,
+    "resource_needs": null,
+    "coverage_capacity": null,
+    "costs": null,
+    "geographic_coverage": null,
+    "evidence_status": "descripción institucional publicada; los campos no documentados se dejan vacíos",
+    "sources": [
+      {
+        "title": "México Vivo Fundación - página oficial",
+        "url": "https://mexicovivo.org/",
+        "accessed": "2026-11-23",
+        "support": "Descripción de ASSI VIVO."
+      },
+      {
+        "title": "Términos y Condiciones de México Vivo",
+        "url": "https://mexicovivo.org/terminos-y-condiciones/",
+        "accessed": "2026-11-23",
+        "support": "Sección 5.3: servicios presenciales y en línea de salud sexual integral."
+      }
+    ]
+  },
+  {
+    "program_id": "hablemos_de_sexo_y_amor",
+    "name": "Hablemos de sexo y amor",
+    "entity": "México Vivo Fundación",
+    "description": "Apartado digital enfocado en activar la conversación sobre salud sexual entre jóvenes, con contenidos sobre sexualidad y relaciones. La página institucional también lo describe como una intervención para facilitar el acceso juvenil a información sobre sexualidad y salud sexual.",
+    "objectives": [],
+    "target_population": [
+      "jóvenes"
+    ],
+    "delivery_channels": [
+      "apartado digital",
+      "contenidos digitales"
+    ],
+    "documented_participation": [],
+    "requirements": null,
+    "resource_needs": null,
+    "coverage_capacity": null,
+    "costs": null,
+    "geographic_coverage": null,
+    "evidence_status": "descripción institucional publicada; los campos no documentados se dejan vacíos",
+    "sources": [
+      {
+        "title": "México Vivo Fundación - página oficial",
+        "url": "https://mexicovivo.org/",
+        "accessed": "2026-11-23",
+        "support": "Descripción de Hablemos de sexo y amor."
+      },
+      {
+        "title": "Términos y Condiciones de México Vivo",
+        "url": "https://mexicovivo.org/terminos-y-condiciones/",
+        "accessed": "2026-11-23",
+        "support": "Sección 5.4: apartado digital y contenidos sobre sexualidad y relaciones."
+      }
+    ]
+  },
+  {
+    "program_id": "empresa_viva",
+    "name": "Empresa Viva",
+    "entity": "México Vivo Fundación",
+    "description": "Busca promover entornos laborales más saludables, incluyentes, igualitarios y equitativos mediante capacitaciones y conferencias.",
+    "objectives": [
+      "Promover entornos laborales saludables, incluyentes, igualitarios y equitativos."
+    ],
+    "target_population": [
+      "personas en espacios de trabajo"
+    ],
+    "delivery_channels": [
+      "capacitaciones",
+      "conferencias"
+    ],
+    "documented_participation": [],
+    "requirements": null,
+    "resource_needs": null,
+    "coverage_capacity": null,
+    "costs": null,
+    "geographic_coverage": null,
+    "evidence_status": "descripción institucional publicada; no se encontró detalle público suficiente para inferir recursos o requisitos",
+    "sources": [
+      {
+        "title": "México Vivo Fundación - página oficial",
+        "url": "https://mexicovivo.org/",
+        "accessed": "2026-11-23",
+        "support": "Descripción de Empresa Viva."
+      }
+    ]
+  },
+  {
+    "program_id": "incidencias",
+    "name": "Incidencias",
+    "entity": "México Vivo Fundación",
+    "description": "Plataforma en línea que propicia el diálogo positivo y ofrece información clara sobre sexualidad para que la juventud pueda asumirla de manera responsable.",
+    "objectives": [],
+    "target_population": [
+      "juventud"
+    ],
+    "delivery_channels": [
+      "plataforma en línea"
+    ],
+    "documented_participation": [],
+    "requirements": null,
+    "resource_needs": null,
+    "coverage_capacity": null,
+    "costs": null,
+    "geographic_coverage": null,
+    "evidence_status": "descripción institucional publicada; no se encontró detalle público suficiente para inferir recursos o requisitos",
+    "sources": [
+      {
+        "title": "México Vivo Fundación - página oficial",
+        "url": "https://mexicovivo.org/",
+        "accessed": "2026-11-23",
+        "support": "Descripción de INCIDENCIAS."
+      }
+    ]
+  }
+]
