@@ -1,0 +1,74 @@
+[
+  {
+    "source_id": "conapo_tefa_municipal_2023",
+    "name": "Tasa Específica de Fecundidad Adolescente por Municipio, 2023",
+    "publisher": "CONAPO",
+    "url": "https://www.gob.mx/conapo/documentos/tasa-especifica-de-fecundidad-adolescente-por-municipio-2023",
+    "format": [
+      "XLSX",
+      "documento metodológico"
+    ],
+    "geographic_level": "municipal",
+    "reference_year": 2023,
+    "description": "La página oficial indica que la base integrada contiene nacimientos de mujeres adolescentes de 15 a 19 años y TEFA por municipio. La estimación utiliza Estadísticas de Nacimientos Registrados de INEGI y reconstrucción/proyecciones municipales de población de CONAPO.",
+    "agent_use": "Contexto de necesidad territorial. No debe interpretarse como causalidad ni como evaluación directa de un programa.",
+    "download_status": "No incluido en este paquete; descargar desde la página oficial."
+  },
+  {
+    "source_id": "conapo_marginacion_municipal_2020",
+    "name": "Índice de marginación municipal 2020",
+    "publisher": "CONAPO / datos.gob.mx",
+    "url": "https://www.datos.gob.mx/dataset/indices_marginacion/resource/d65dbd44-2fad-4344-bfc2-45152067a14d",
+    "format": [
+      "CSV"
+    ],
+    "geographic_level": "municipal",
+    "reference_year": 2020,
+    "description": "Indicadores socioeconómicos e índice y grado de marginación por estado y municipio. El recurso consultado reporta actualización de datos del 13 de marzo de 2025 y tamaño de 568.9 KiB.",
+    "agent_use": "Contexto socioeconómico municipal.",
+    "download_status": "No incluido en este paquete; descargar desde datos.gob.mx."
+  },
+  {
+    "source_id": "sep_catalogo_centros_trabajo_2025",
+    "name": "Catálogo de Centros de Trabajo SEP 2025",
+    "publisher": "Secretaría de Educación Pública / datos.gob.mx",
+    "url": "https://www.datos.gob.mx/dataset/catalogo_centros_trabajo_sep",
+    "format": [
+      "CSV"
+    ],
+    "geographic_level": "centro de trabajo",
+    "reference_year": 2025,
+    "description": "Catálogo de centros educativos de la SEP, federación, estados, municipios, instituciones autónomas y particulares. La ficha de datos.gob.mx muestra versiones 2025 y 2024.",
+    "agent_use": "Identificación y caracterización de centros educativos; revisar el diccionario de variables antes de usar columnas concretas.",
+    "download_status": "No incluido en este paquete; descargar desde datos.gob.mx."
+  },
+  {
+    "source_id": "enapea_sims",
+    "name": "Sistema de Indicadores para Monitoreo y Seguimiento de ENAPEA",
+    "publisher": "Gobierno de México / ENAPEA",
+    "url": "https://unidaddegenero.segob.gob.mx/es/ENAPEA/Que_es_la_ENAPEA",
+    "format": [
+      "sistema web",
+      "documentos"
+    ],
+    "geographic_level": "federal y estatal según indicador",
+    "reference_year": null,
+    "description": "La página describe un sistema con 53 indicadores para monitoreo y seguimiento de la ENAPEA.",
+    "agent_use": "Contexto de política pública y contraste con acciones gubernamentales. Confirmar el nivel geográfico y periodo de cada indicador.",
+    "download_status": "No se empaqueta una extracción porque la fuente consultada es un sistema web."
+  },
+  {
+    "source_id": "mexico_vivo_official",
+    "name": "México Vivo Fundación - sitio oficial",
+    "publisher": "México Vivo Fundación",
+    "url": "https://mexicovivo.org/",
+    "format": [
+      "HTML"
+    ],
+    "geographic_level": null,
+    "reference_year": null,
+    "description": "Describe misión, programas y servicios de la fundación, así como algunos resultados institucionales de 2023.",
+    "agent_use": "Base documental del Agente Experto de la Fundación.",
+    "download_status": "Los hechos y descripciones verificados se estructuran en los archivos de este paquete."
+  }
+]

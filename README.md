@@ -23,7 +23,7 @@ SequentialAgent "mexico_vivo"
 | Agente | Dueño | Archivo | Herramientas | Tipo |
 |---|---|---|---|---|
 | Evaluador | Meyer | `mexico_vivo/agentes/evaluador.py` | `municipios_prioritarios`, `perfil_municipio`, `escuelas_municipio` · `buscar_centros_amigables` | MCP · RAG |
-| Experto de la Fundación | Iker | `mexico_vivo/agentes/experto.py` | `listar_programas`, `recursos_disponibles`, `historial_intervenciones` · `buscar_programas` · `exit_loop` | Funciones · RAG |
+| Experto de la Fundación | Iker | `mexico_vivo/agentes/experto.py` | `search_programs`, `get_program_details` · `get_available_resources`, `calculate_intervention_cost`, `check_feasibility`, `get_intervention_history`, `audit_proposal` · `exit_loop` | RAG · Funciones (SQL) |
 | Contactador | Elías | `mexico_vivo/agentes/contactador.py` | `historial_contactos`, `enviar_correo` 👤, `registrar_seguimiento` 👤 | Funciones |
 
 **Por qué varios agentes:** contextos grandes y separados (datos nacionales vs. conocimiento interno
@@ -75,13 +75,18 @@ Datos reales (descargar a `datos/crudos/` y completar `cargar_reales()`):
 | Índice de marginación municipal | [datos.gob.mx](https://www.datos.gob.mx/dataset/indices_marginacion) | Público |
 | Catálogo de centros de trabajo SEP | [datos.gob.mx](https://www.datos.gob.mx/dataset/catalogo_centros_trabajo_sep) | Público |
 | Directorio de Centros Amigables (PDF 172 p.) → RAG | Secretaría de Salud | Público |
-| Programas, personal, presupuesto, inventario, intervenciones | `scripts/generar_datos_sinteticos.py` | Sintético |
+| Catálogo de programas de México Vivo + cifras 2023 → RAG del Experto | `datos/fundacion/` (sitio oficial, consultado 2026-11-23; ver su README) | Público, verificado |
+| Presupuesto, personal, inventario, costos, capacidad, historial | `scripts/generar_datos_sinteticos.py` (cada fila con `origen = 'SIMULADO'`) | Sintético |
+
+> No hay datos públicos de recursos operativos de México Vivo. El escenario simulado sólo cubre
+> Generación Viva, PARESS y Hablemos de sexo y amor; para ASSI Vivo, Empresa Viva e Incidencias el
+> Experto debe responder `INFORMACIÓN NO DISPONIBLE`.
 
 RAG:
 
 ```bash
+python scripts/ingest.py programas datos/fundacion/
 python scripts/ingest.py centros_amigables datos/documentos/centros_amigables/
-python scripts/ingest.py programas datos/documentos/programas/
 ```
 
 ## Correr
@@ -91,6 +96,9 @@ python verificar_entorno.py      # todo en ✅
 python probar_servidor.py Chiapas
 adk web                          # http://localhost:8000 → elegir "mexico_vivo"
 ```
+
+Para probar un agente solo, sin los demás: en `adk web` elijan `solo_experto` y peguen una
+propuesta como la que mandaría el Evaluador (ver `solo_experto/agent.py`).
 
 Los correos son **simulados**: se guardan en `salida/*.eml` y en la tabla `contactos`.
 

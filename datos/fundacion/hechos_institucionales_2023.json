@@ -1,0 +1,48 @@
+[
+  {
+    "fact_id": "mv_2023_workshops_8211",
+    "statement": "La página oficial reporta 8,211 jóvenes asistentes a jornadas educativas en 2023.",
+    "value": 8211,
+    "unit": "jóvenes asistentes",
+    "period": 2023,
+    "scope": "México Vivo Fundación; la página no atribuye inequívocamente esta cifra a un único programa",
+    "source_url": "https://mexicovivo.org/",
+    "note": "No sumar con otras cifras de asistentes: la página también muestra 3,818 jóvenes asistentes a talleres y no explica en el texto consultado la relación entre ambos indicadores."
+  },
+  {
+    "fact_id": "mv_2023_center_3127",
+    "statement": "La página oficial reporta 3,127 personas atendidas en el Centro Comunitario en 2023.",
+    "value": 3127,
+    "unit": "personas atendidas",
+    "period": 2023,
+    "scope": "Centro Comunitario",
+    "source_url": "https://mexicovivo.org/"
+  },
+  {
+    "fact_id": "mv_2023_condoms_1m",
+    "statement": "La página oficial reporta un millón de condones donados a través de una red de 53 organizaciones comunitarias en 2023.",
+    "value": 1000000,
+    "unit": "condones donados",
+    "period": 2023,
+    "scope": "red de 53 organizaciones comunitarias",
+    "source_url": "https://mexicovivo.org/"
+  },
+  {
+    "fact_id": "mv_2023_workshop_attendees_3818",
+    "statement": "La página oficial también reporta 3,818 jóvenes asistentes a talleres en 2023; el texto consultado no especifica la relación de esta cifra con los 8,211 asistentes a jornadas educativas.",
+    "value": 3818,
+    "unit": "jóvenes asistentes",
+    "period": 2023,
+    "scope": "México Vivo Fundación; atribución programática no especificada",
+    "source_url": "https://mexicovivo.org/"
+  },
+  {
+    "fact_id": "mv_2023_paress_courses_237",
+    "statement": "La página oficial reporta 237 cursos completados en PARESS en 2023.",
+    "value": 237,
+    "unit": "cursos completados",
+    "period": 2023,
+    "scope": "PARESS",
+    "source_url": "https://mexicovivo.org/"
+  }
+]
